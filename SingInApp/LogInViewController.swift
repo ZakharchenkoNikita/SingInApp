@@ -12,6 +12,9 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
+    private let loginUserName = "Nikita"
+    private let loginPassword = "pass"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +35,7 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func logInPressed() {
-        presentProfileView()
+        showProfileVC()
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -51,8 +54,7 @@ class LogInViewController: UIViewController {
         present(alert, animated: true)
     }
     
-    private func presentProfileView() {
-        
+    private func showProfileVC() {
         checkTextFields()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -68,7 +70,7 @@ class LogInViewController: UIViewController {
         let userName = userNameTF.text
         let password = passwordTF.text
         
-        if let _ = userName?.isEmpty, let _ = password?.isEmpty, userName != "Nikita" || password != "pass" {
+        if let _ = userName?.isEmpty, let _ = password?.isEmpty, userName != loginUserName || password != loginPassword {
             callAlert(with: "Ooops!", message: "User name or Password are wronge!")
             passwordTF.text = ""
         }
@@ -84,7 +86,7 @@ extension LogInViewController: UITextFieldDelegate {
         case userNameTF:
             passwordTF.becomeFirstResponder()
         default:
-            presentProfileView()
+            showProfileVC()
         }
         
         return true
