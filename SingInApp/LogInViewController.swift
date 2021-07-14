@@ -8,7 +8,7 @@
 import UIKit
 
 class LogInViewController: UIViewController {
-
+    
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
@@ -27,20 +27,20 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func showForgotUserName() {
-        callAlert(with: "Oooops", message: "Your login: Nikita")
+        callAlert(with: "Oooops!", message: "Your login: Nikita")
     }
     
     @IBAction func showForgotPassword() {
-        callAlert(with: "Oooops", message: "Your password: pass")
+        callAlert(with: "Oooops!", message: "Your password: pass")
     }
     
-    @IBAction func logInPressed() {
-        showProfileVC()
+    @IBAction func logInButtonPressed() {
+        goToProfileVC()
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        userNameTF.text = ""
-        passwordTF.text = ""
+        self.userNameTF.text = ""
+        self.passwordTF.text = ""
         dismiss(animated: true)
     }
     
@@ -55,8 +55,6 @@ class LogInViewController: UIViewController {
     }
     
     private func showProfileVC() {
-        checkTextFields()
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let loginVC = storyboard.instantiateViewController(identifier: "ProfileVC") as? ProfileViewController else { return }
         
@@ -66,13 +64,15 @@ class LogInViewController: UIViewController {
         show(loginVC, sender: nil)
     }
     
-    private func checkTextFields() {
+    private func goToProfileVC() {
         let userName = userNameTF.text
         let password = passwordTF.text
         
         if let _ = userName?.isEmpty, let _ = password?.isEmpty, userName != loginUserName || password != loginPassword {
-            callAlert(with: "Ooops!", message: "User name or Password are wronge!")
+            callAlert(with: "Oooops!", message: "User name or Password are wronge!")
             passwordTF.text = ""
+        } else {
+            showProfileVC()
         }
     }
 }
@@ -86,10 +86,9 @@ extension LogInViewController: UITextFieldDelegate {
         case userNameTF:
             passwordTF.becomeFirstResponder()
         default:
-            showProfileVC()
+            goToProfileVC()
         }
         
         return true
     }
-    
 }
