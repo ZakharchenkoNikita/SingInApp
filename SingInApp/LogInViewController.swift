@@ -12,6 +12,10 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
+    
+    @IBOutlet weak var forgotUserNameTitleLabel: UIButton!
+    @IBOutlet weak var forgotPasswordTitleLabel: UIButton!
+    
     private let loginUserName = "Nikita"
     private let loginPassword = "pass"
     
@@ -20,6 +24,9 @@ class LogInViewController: UIViewController {
         
         userNameTF.delegate = self
         passwordTF.delegate = self
+        
+        forgotUserNameTitleLabel.titleLabel?.adjustsFontSizeToFitWidth = true
+        forgotPasswordTitleLabel.titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -46,11 +53,9 @@ class LogInViewController: UIViewController {
     
     private func callAlert(with title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
         let okAction = UIAlertAction(title: "OK", style: .default)
         
         alert.addAction(okAction)
-        
         present(alert, animated: true)
     }
     
