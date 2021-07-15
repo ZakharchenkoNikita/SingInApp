@@ -48,7 +48,6 @@ class LogInViewController: UIViewController {
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         self.userNameTF.text = ""
         self.passwordTF.text = ""
-        dismiss(animated: true)
     }
     
     private func callAlert(with title: String, message: String) {
