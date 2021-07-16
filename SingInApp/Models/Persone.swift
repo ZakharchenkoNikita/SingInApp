@@ -9,4 +9,5 @@ struct Persone {
     let name: String
     let surmane: String
     let age: Int
+    let gender: Gender
 }

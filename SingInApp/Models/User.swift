@@ -17,7 +17,10 @@ extension User {
             User(
                 login: "n",
                 password: "p",
-                persone: Persone(name: "Nikita", surmane: "Zakharchenko", age: 22))
+                persone: Persone(name: "Nikita",
+                                 surmane: "Zakharchenko",
+                                 age: 22,
+                                 gender: .male))
         ]
     }
 }

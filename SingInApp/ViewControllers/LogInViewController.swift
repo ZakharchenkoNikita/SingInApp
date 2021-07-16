@@ -37,13 +37,16 @@ class LogInViewController: UIViewController {
         
         for viewController in tabBarController.viewControllers ?? [] {
             var fullName = ""
-    
+            var gender = ""
+            
             for user in users {
                 fullName = "\(user.persone.name) \(user.persone.surmane)"
+                gender = "\(user.persone.gender.rawValue)"
             }
             
             if let profileVC = viewController as? ProfileViewController {
                 profileVC.userName = fullName
+                profileVC.userGender = gender
             } else if let navigationController = viewController as? UINavigationController {
                 let infoVC = navigationController.topViewController as! InfoViewController
                 infoVC.titleName = fullName
