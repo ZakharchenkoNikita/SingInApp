@@ -9,30 +9,43 @@ import UIKit
 
 class LogInViewController: UIViewController {
     
+    // MARK: IBOutlets
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
+    @IBOutlet weak var loginButton: UIButton!
     
     @IBOutlet weak var forgotUserNameTitleLabel: UIButton!
     @IBOutlet weak var forgotPasswordTitleLabel: UIButton!
     
-    private let loginUserName = "Nikita"
-    private let loginPassword = "pass"
+    // MARK: private properties
+    private let users = User.getInfo()
     
+    // MARK: override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userNameTF.delegate = self
-        passwordTF.delegate = self
+        loginButton.layer.cornerRadius = 10
         
         forgotUserNameTitleLabel.titleLabel?.adjustsFontSizeToFitWidth = true
         forgotPasswordTitleLabel.titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
+    // MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let profileVC = segue.destination as? ProfileViewController else { return }
+        
+        var fullName = ""
+        
+        for user in users {
+            for persone in user.persone {
+                fullName = "\(persone.name) \(persone.surmane)"
+            }
+        }
+        profileVC.userName = fullName
     }
     
+    // MARK: IBActions
     @IBAction func showForgotUserName() {
         callAlert(with: "Oooops!", message: "Your login: Nikita")
     }
@@ -42,55 +55,49 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func logInButtonPressed() {
-        goToProfileVC()
+        let userName = userNameTF.text
+        let password = passwordTF.text
+        
+        for user in users {
+            if userName != user.login || password != user.password {
+                callAlert(with: "Oooops!", message: "User name or Password are wronge!")
+                return
+            }
+        }
+        
+        performSegue(withIdentifier: "ProfileVC", sender: nil)
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        self.userNameTF.text = ""
-        self.passwordTF.text = ""
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
     
+    // MARK: private methods
     private func callAlert(with title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
         
         alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-    
-    private func showProfileVC() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let loginVC = storyboard.instantiateViewController(identifier: "ProfileVC") as? ProfileViewController else { return }
-        
-        loginVC.modalPresentationStyle = .fullScreen
-        loginVC.userName = userNameTF.text
-        
-        show(loginVC, sender: nil)
-    }
-    
-    private func goToProfileVC() {
-        let userName = userNameTF.text
-        let password = passwordTF.text
-        
-        if let _ = userName?.isEmpty, let _ = password?.isEmpty, userName != loginUserName || password != loginPassword {
-            callAlert(with: "Oooops!", message: "User name or Password are wronge!")
-            passwordTF.text = ""
-        } else {
-            showProfileVC()
+        present(alert, animated: true) {
+            self.passwordTF.text = ""
         }
     }
 }
 
-// MARK: Text field delegate
-
+// MARK: working with keyboard
 extension LogInViewController: UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case userNameTF:
             passwordTF.becomeFirstResponder()
         default:
-            goToProfileVC()
+            logInButtonPressed()
         }
         
         return true
