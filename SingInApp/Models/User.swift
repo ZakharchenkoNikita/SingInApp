@@ -8,7 +8,7 @@
 struct User {
     let login: String
     let password: String
-    let profile: [Profile]
+    let profile: [Persone]
 }
 
 extension User {
@@ -17,7 +17,7 @@ extension User {
             User(
                 login: "Nikita",
                 password: "pass",
-                profile: [Profile(name: "Никита", surmane: "Захарченко", age: 22)])
+                profile: [Persone(name: "Никита", surmane: "Захарченко", age: 22)])
         ]
     }
 }
