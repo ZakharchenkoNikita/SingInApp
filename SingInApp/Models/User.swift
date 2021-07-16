@@ -8,16 +8,16 @@
 struct User {
     let login: String
     let password: String
-    let persone: [Persone]
+    let persone: Persone
 }
 
 extension User {
     static func getInfo() -> [User] {
         return [
             User(
-                login: "Nikita",
-                password: "pass",
-                persone: [Persone(name: "Nikita", surmane: "Zakharchenko", age: 22)])
+                login: "n",
+                password: "p",
+                persone: Persone(name: "Nikita", surmane: "Zakharchenko", age: 22))
         ]
     }
 }

@@ -36,15 +36,17 @@ class LogInViewController: UIViewController {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
         
         for viewController in tabBarController.viewControllers ?? [] {
+            var fullName = ""
+    
+            for user in users {
+                fullName = "\(user.persone.name) \(user.persone.surmane)"
+            }
+            
             if let profileVC = viewController as? ProfileViewController {
-                var fullName = ""
-                
-                for user in users {
-                    for persone in user.persone {
-                        fullName = "\(persone.name) \(persone.surmane)"
-                    }
-                }
                 profileVC.userName = fullName
+            } else if let navigationController = viewController as? UINavigationController {
+                let infoVC = navigationController.topViewController as! InfoViewController
+                infoVC.titleName = fullName
             }
         }
     }
