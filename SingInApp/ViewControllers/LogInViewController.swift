@@ -33,16 +33,20 @@ class LogInViewController: UIViewController {
     
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let profileVC = segue.destination as? ProfileViewController else { return }
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
         
-        var fullName = ""
-        
-        for user in users {
-            for persone in user.persone {
-                fullName = "\(persone.name) \(persone.surmane)"
+        for viewController in tabBarController.viewControllers ?? [] {
+            if let profileVC = viewController as? ProfileViewController {
+                var fullName = ""
+                
+                for user in users {
+                    for persone in user.persone {
+                        fullName = "\(persone.name) \(persone.surmane)"
+                    }
+                }
+                profileVC.userName = fullName
             }
         }
-        profileVC.userName = fullName
     }
     
     // MARK: IBActions
