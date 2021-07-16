@@ -8,5 +8,16 @@
 struct User {
     let login: String
     let password: String
-    let profile: Profile
+    let profile: [Profile]
+}
+
+extension User {
+    static func getInfo() -> [User] {
+        return [
+            User(
+                login: "Nikita",
+                password: "pass",
+                profile: [Profile(name: "Никита", surmane: "Захарченко", age: 22)])
+        ]
+    }
 }
