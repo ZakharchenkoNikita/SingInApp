@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1125B9F726A180FF00B7EC70 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125B9F626A180FF00B7EC70 /* User.swift */; };
+		1125B9F926A1813500B7EC70 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125B9F826A1813500B7EC70 /* Profile.swift */; };
 		11568B26269CDF76008421AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11568B25269CDF76008421AC /* AppDelegate.swift */; };
 		11568B28269CDF76008421AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11568B27269CDF76008421AC /* SceneDelegate.swift */; };
 		11568B2D269CDF76008421AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11568B2B269CDF76008421AC /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1125B9F626A180FF00B7EC70 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1125B9F826A1813500B7EC70 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		11568B22269CDF76008421AC /* SingInApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingInApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11568B25269CDF76008421AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11568B27269CDF76008421AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1125B9F226A1806A00B7EC70 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				11568B39269CE1B1008421AC /* LogInViewController.swift */,
+				11568B3B269CE1D4008421AC /* ProfileViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1125B9F326A1807E00B7EC70 /* Storydoards */ = {
+			isa = PBXGroup;
+			children = (
+				11568B2B269CDF76008421AC /* Main.storyboard */,
+				11568B30269CDF77008421AC /* LaunchScreen.storyboard */,
+			);
+			path = Storydoards;
+			sourceTree = "<group>";
+		};
+		1125B9F426A1809100B7EC70 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1125B9F626A180FF00B7EC70 /* User.swift */,
+				1125B9F826A1813500B7EC70 /* Profile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1125B9F526A180A700B7EC70 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				11568B25269CDF76008421AC /* AppDelegate.swift */,
+				11568B27269CDF76008421AC /* SceneDelegate.swift */,
+				11568B2E269CDF77008421AC /* Assets.xcassets */,
+				11568B33269CDF77008421AC /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
 		11568B19269CDF76008421AC = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +100,10 @@
 		11568B24269CDF76008421AC /* SingInApp */ = {
 			isa = PBXGroup;
 			children = (
-				11568B25269CDF76008421AC /* AppDelegate.swift */,
-				11568B27269CDF76008421AC /* SceneDelegate.swift */,
-				11568B39269CE1B1008421AC /* LogInViewController.swift */,
-				11568B3B269CE1D4008421AC /* ProfileViewController.swift */,
-				11568B2B269CDF76008421AC /* Main.storyboard */,
-				11568B2E269CDF77008421AC /* Assets.xcassets */,
-				11568B30269CDF77008421AC /* LaunchScreen.storyboard */,
-				11568B33269CDF77008421AC /* Info.plist */,
+				1125B9F426A1809100B7EC70 /* Models */,
+				1125B9F226A1806A00B7EC70 /* ViewControllers */,
+				1125B9F326A1807E00B7EC70 /* Storydoards */,
+				1125B9F526A180A700B7EC70 /* SupportFiles */,
 			);
 			path = SingInApp;
 			sourceTree = "<group>";
@@ -141,8 +179,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				11568B26269CDF76008421AC /* AppDelegate.swift in Sources */,
+				1125B9F926A1813500B7EC70 /* Profile.swift in Sources */,
 				11568B28269CDF76008421AC /* SceneDelegate.swift in Sources */,
 				11568B3C269CE1D4008421AC /* ProfileViewController.swift in Sources */,
+				1125B9F726A180FF00B7EC70 /* User.swift in Sources */,
 				11568B3A269CE1B1008421AC /* LogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +332,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CHP9M644H;
-				INFOPLIST_FILE = SingInApp/Info.plist;
+				INFOPLIST_FILE = SingInApp/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +351,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CHP9M644H;
-				INFOPLIST_FILE = SingInApp/Info.plist;
+				INFOPLIST_FILE = SingInApp/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
