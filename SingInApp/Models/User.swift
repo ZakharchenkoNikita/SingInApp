@@ -21,8 +21,7 @@ extension User {
                 persone: Persone(name: "Nikita",
                                  surmane: "Zakharchenko",
                                  age: 22,
-                                 gender: .male,
-                                 profileImage: #imageLiteral(resourceName: "profileImage")))
+                                 gender: .male))
         ]
     }
 }

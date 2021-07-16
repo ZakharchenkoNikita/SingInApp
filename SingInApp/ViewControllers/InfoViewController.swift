@@ -11,10 +11,8 @@ class InfoViewController: UIViewController {
     
     // MARK: IBOutlets
     @IBOutlet weak var moreInfoButton: UIButton!
-    @IBOutlet weak var profileImage: UIImageView!
     
     var titleName: String!
-    var userProfileImage: UIImage!
     
     // MARK: private properties
     private let users = User.getInfo()
@@ -25,8 +23,6 @@ class InfoViewController: UIViewController {
         
         moreInfoButton.layer.cornerRadius = 10
         navigationItem.title = titleName
-        
-        profileImage.image = userProfileImage
     }
     
     @IBAction func moreInfoButtonPressed() {
