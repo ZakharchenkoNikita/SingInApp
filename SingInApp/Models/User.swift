@@ -4,6 +4,7 @@
 //
 //  Created by Nikita on 16.07.21.
 //
+import UIKit
 
 struct User {
     let login: String
@@ -20,7 +21,8 @@ extension User {
                 persone: Persone(name: "Nikita",
                                  surmane: "Zakharchenko",
                                  age: 22,
-                                 gender: .male))
+                                 gender: .male,
+                                 profileImage: #imageLiteral(resourceName: "profileImage")))
         ]
     }
 }

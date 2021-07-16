@@ -38,10 +38,12 @@ class LogInViewController: UIViewController {
         for viewController in tabBarController.viewControllers ?? [] {
             var fullName = ""
             var gender = ""
+            var profileImage = UIImage()
             
             for user in users {
                 fullName = "\(user.persone.name) \(user.persone.surmane)"
                 gender = "\(user.persone.gender.rawValue)"
+                profileImage = user.persone.profileImage
             }
             
             if let profileVC = viewController as? ProfileViewController {
@@ -50,6 +52,7 @@ class LogInViewController: UIViewController {
             } else if let navigationController = viewController as? UINavigationController {
                 let infoVC = navigationController.topViewController as! InfoViewController
                 infoVC.titleName = fullName
+                infoVC.userProfileImage = profileImage
             }
         }
     }
