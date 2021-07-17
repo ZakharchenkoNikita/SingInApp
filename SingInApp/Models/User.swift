@@ -4,7 +4,6 @@
 //
 //  Created by Nikita on 16.07.21.
 //
-import UIKit
 
 struct User {
     let login: String
@@ -22,6 +21,6 @@ extension User {
                                  age: 22,
                                  gender: .male,
                                  familyStatus: .haveAPartner,
-                                 currentCity: "Cologne"))
+                                 currentCity: "Кёльн"))
     }
 }

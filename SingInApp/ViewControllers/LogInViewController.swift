@@ -43,7 +43,11 @@ class LogInViewController: UIViewController {
                 profileVC.userGender = String(user.persone.gender.rawValue)
             } else if let navigationController = viewController as? UINavigationController {
                 let infoVC = navigationController.topViewController as! InfoViewController
+                
                 infoVC.titleName = fullName
+                infoVC.userFamilyStatus = user.persone.familyStatus.rawValue
+                infoVC.userAge = user.persone.age
+                infoVC.userCurrentCity = user.persone.currentCity
             }
         }
     }

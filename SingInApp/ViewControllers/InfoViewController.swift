@@ -12,10 +12,19 @@ class InfoViewController: UIViewController {
     // MARK: IBOutlets
     @IBOutlet weak var moreInfoButton: UIButton!
     
+    @IBOutlet weak var familyStatusLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var currentCityLabel: UILabel!
+    
+    // MARK: properties
     var titleName: String!
     
+    var userFamilyStatus: String!
+    var userAge: Int!
+    var userCurrentCity: String!
+    
     // MARK: private properties
-    private let users = User.getInfo()
+    private let user = User.getInfo()
     
     // MARK: override methods
     override func viewDidLoad() {
@@ -23,6 +32,10 @@ class InfoViewController: UIViewController {
         
         moreInfoButton.layer.cornerRadius = 10
         navigationItem.title = titleName
+        
+        familyStatusLabel.text = userFamilyStatus
+        ageLabel.text = String(userAge)
+        currentCityLabel.text = userCurrentCity
     }
     
     @IBAction func moreInfoButtonPressed() {
