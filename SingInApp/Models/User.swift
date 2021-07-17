@@ -21,6 +21,7 @@ extension User {
                                  age: 22,
                                  gender: .male,
                                  familyStatus: .haveAPartner,
-                                 currentCity: "Кёльн"))
+                                 currentCity: "Кёльн",
+                                 pet: .cat))
     }
 }

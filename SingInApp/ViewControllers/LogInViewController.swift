@@ -44,10 +44,11 @@ class LogInViewController: UIViewController {
             } else if let navigationController = viewController as? UINavigationController {
                 let infoVC = navigationController.topViewController as! InfoViewController
                 
-                infoVC.titleName = fullName
+                infoVC.navigationBarTitle = fullName
                 infoVC.userFamilyStatus = user.persone.familyStatus.rawValue
                 infoVC.userAge = user.persone.age
                 infoVC.userCurrentCity = user.persone.currentCity
+                infoVC.userGender = user.persone.gender.rawValue
             }
         }
     }

@@ -12,4 +12,5 @@ struct Persone {
     let gender: Gender
     let familyStatus: FamilyStatus
     let currentCity: String
+    let pet: PetType
 }
