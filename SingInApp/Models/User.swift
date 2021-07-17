@@ -13,15 +13,15 @@ struct User {
 }
 
 extension User {
-    static func getInfo() -> [User] {
-        return [
-            User(
+    static func getInfo() -> User {
+        return User(
                 login: "n",
                 password: "p",
                 persone: Persone(name: "Nikita",
                                  surmane: "Zakharchenko",
                                  age: 22,
-                                 gender: .male))
-        ]
+                                 gender: .male,
+                                 familyStatus: .haveAPartner,
+                                 currentCity: "Cologne"))
     }
 }

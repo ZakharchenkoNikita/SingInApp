@@ -10,4 +10,6 @@ struct Persone {
     let surmane: String
     let age: Int
     let gender: Gender
+    let familyStatus: FamilyStatus,
+    let currentCity: String
 }

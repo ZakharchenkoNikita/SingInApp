@@ -20,6 +20,7 @@
 		11568B32269CDF77008421AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11568B30269CDF77008421AC /* LaunchScreen.storyboard */; };
 		11568B3A269CE1B1008421AC /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11568B39269CE1B1008421AC /* LogInViewController.swift */; };
 		11568B3C269CE1D4008421AC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11568B3B269CE1D4008421AC /* ProfileViewController.swift */; };
+		11ED669126A2D14300026A93 /* FamilyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ED669026A2D14300026A93 /* FamilyStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		11568B33269CDF77008421AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11568B39269CE1B1008421AC /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		11568B3B269CE1D4008421AC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		11ED669026A2D14300026A93 /* FamilyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				1125B9F626A180FF00B7EC70 /* User.swift */,
 				1125B9F826A1813500B7EC70 /* Persone.swift */,
 				1125BA0026A1CC5B00B7EC70 /* Gender.swift */,
+				11ED669026A2D14300026A93 /* FamilyStatus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				11568B26269CDF76008421AC /* AppDelegate.swift in Sources */,
 				1125B9F926A1813500B7EC70 /* Persone.swift in Sources */,
 				11568B28269CDF76008421AC /* SceneDelegate.swift in Sources */,
+				11ED669126A2D14300026A93 /* FamilyStatus.swift in Sources */,
 				1125B9FB26A1A6CC00B7EC70 /* InfoViewController.swift in Sources */,
 				11568B3C269CE1D4008421AC /* ProfileViewController.swift in Sources */,
 				1125B9FD26A1C18C00B7EC70 /* MoreInfoViewController.swift in Sources */,

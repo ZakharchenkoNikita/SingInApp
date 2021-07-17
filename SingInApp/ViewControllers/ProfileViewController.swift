@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController {
     var userGender = ""
     
     // MARK: private properties
-    private let users = User.getInfo()
+//    private let users = User.getInfo()
     
     // MARK: override methods
     override func viewDidLoad() {

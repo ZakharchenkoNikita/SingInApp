@@ -19,7 +19,7 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var forgotPasswordTitleLabel: UIButton!
     
     // MARK: private properties
-    private let users = User.getInfo()
+    private let user = User.getInfo()
     
     // MARK: override methods
     override func viewDidLoad() {
@@ -36,17 +36,11 @@ class LogInViewController: UIViewController {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
         
         for viewController in tabBarController.viewControllers ?? [] {
-            var fullName = ""
-            var gender = ""
-            
-            for user in users {
-                fullName = "\(user.persone.name) \(user.persone.surmane)"
-                gender = "\(user.persone.gender.rawValue)"
-            }
-            
+            let fullName = "\(user.persone.name) \(user.persone.surmane)"
+
             if let profileVC = viewController as? ProfileViewController {
                 profileVC.userName = fullName
-                profileVC.userGender = gender
+                profileVC.userGender = String(user.persone.gender.rawValue)
             } else if let navigationController = viewController as? UINavigationController {
                 let infoVC = navigationController.topViewController as! InfoViewController
                 infoVC.titleName = fullName
@@ -67,11 +61,9 @@ class LogInViewController: UIViewController {
         let userName = userNameTF.text
         let password = passwordTF.text
         
-        for user in users {
-            if userName != user.login || password != user.password {
-                callAlert(with: "Oooops!", message: "User name or Password are wronge!")
-                return
-            }
+        if userName != user.login || password != user.password {
+            callAlert(with: "Oooops!", message: "User name or Password are wronge!")
+            return
         }
         
         performSegue(withIdentifier: "ProfileVC", sender: nil)
