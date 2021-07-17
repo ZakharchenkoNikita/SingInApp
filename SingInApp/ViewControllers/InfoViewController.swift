@@ -18,6 +18,8 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var petLabel: UILabel!
     
+    @IBOutlet weak var profileImage: UIImageView!
+    
     // MARK: properties
     var navigationBarTitle: String!
     
@@ -26,6 +28,7 @@ class InfoViewController: UIViewController {
     var userCurrentCity: String!
     var userGender: String!
     var userPet: String!
+    var userProfileImage: String!
     
     var user: User!
     
@@ -39,9 +42,14 @@ class InfoViewController: UIViewController {
         getUserInfo()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let moreInfoVC = segue.destination as? MoreInfoViewController else { return }
+    override func viewWillLayoutSubviews() {
+        profileImage.layer.cornerRadius = profileImage.frame.size.height / 2
+        profileImage.clipsToBounds = true
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let moreInfoVC = segue.destination as? MoreInfoViewController else { return }
+//    }
 
     // MARK: IBAction
     @IBAction func moreInfoButtonPressed() {
@@ -55,5 +63,6 @@ class InfoViewController: UIViewController {
         currentCityLabel.text = userCurrentCity
         genderLabel.text = userGender
         petLabel.text = userPet
+        profileImage.image = UIImage(named: userProfileImage)
     }
 }

@@ -20,6 +20,9 @@
 		11568B32269CDF77008421AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11568B30269CDF77008421AC /* LaunchScreen.storyboard */; };
 		11568B3A269CE1B1008421AC /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11568B39269CE1B1008421AC /* LogInViewController.swift */; };
 		11568B3C269CE1D4008421AC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11568B3B269CE1D4008421AC /* ProfileViewController.swift */; };
+		11D9EBD526A3261B00B6A3C3 /* PersoneFoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9EBD426A3261B00B6A3C3 /* PersoneFoto.swift */; };
+		11D9EBD726A3461900B6A3C3 /* ShortInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9EBD626A3461900B6A3C3 /* ShortInformation.swift */; };
+		11D9EBD926A3476600B6A3C3 /* MoreInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9EBD826A3476600B6A3C3 /* MoreInformation.swift */; };
 		11ED669126A2D14300026A93 /* FamilyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ED669026A2D14300026A93 /* FamilyStatus.swift */; };
 		11ED669326A2F82600026A93 /* PetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ED669226A2F82600026A93 /* PetType.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +43,9 @@
 		11568B33269CDF77008421AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11568B39269CE1B1008421AC /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		11568B3B269CE1D4008421AC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		11D9EBD426A3261B00B6A3C3 /* PersoneFoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersoneFoto.swift; sourceTree = "<group>"; };
+		11D9EBD626A3461900B6A3C3 /* ShortInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortInformation.swift; sourceTree = "<group>"; };
+		11D9EBD826A3476600B6A3C3 /* MoreInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInformation.swift; sourceTree = "<group>"; };
 		11ED669026A2D14300026A93 /* FamilyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyStatus.swift; sourceTree = "<group>"; };
 		11ED669226A2F82600026A93 /* PetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +90,9 @@
 				1125BA0026A1CC5B00B7EC70 /* Gender.swift */,
 				11ED669026A2D14300026A93 /* FamilyStatus.swift */,
 				11ED669226A2F82600026A93 /* PetType.swift */,
+				11D9EBD426A3261B00B6A3C3 /* PersoneFoto.swift */,
+				11D9EBD626A3461900B6A3C3 /* ShortInformation.swift */,
+				11D9EBD826A3476600B6A3C3 /* MoreInformation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,7 +214,10 @@
 				1125B9FD26A1C18C00B7EC70 /* MoreInfoViewController.swift in Sources */,
 				11ED669326A2F82600026A93 /* PetType.swift in Sources */,
 				1125BA0126A1CC5B00B7EC70 /* Gender.swift in Sources */,
+				11D9EBD526A3261B00B6A3C3 /* PersoneFoto.swift in Sources */,
 				1125B9FF26A1C67D00B7EC70 /* GalleryViewController.swift in Sources */,
+				11D9EBD926A3476600B6A3C3 /* MoreInformation.swift in Sources */,
+				11D9EBD726A3461900B6A3C3 /* ShortInformation.swift in Sources */,
 				1125B9F726A180FF00B7EC70 /* User.swift in Sources */,
 				11568B3A269CE1B1008421AC /* LogInViewController.swift in Sources */,
 			);

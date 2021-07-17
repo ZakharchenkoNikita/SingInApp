@@ -104,11 +104,12 @@ extension LogInViewController {
                 let infoVC = navigationController.topViewController as! InfoViewController
                 infoVC.navigationBarTitle = fullName
                 
-                infoVC.userFamilyStatus = user.persone.familyStatus.rawValue
-                infoVC.userAge = user.persone.age
-                infoVC.userCurrentCity = user.persone.currentCity
-                infoVC.userGender = user.persone.gender.rawValue
-                infoVC.userPet = user.persone.pet.rawValue
+                infoVC.userFamilyStatus = user.persone.shortInformation.familyStatus.rawValue
+                infoVC.userAge = user.persone.shortInformation.age
+                infoVC.userCurrentCity = user.persone.shortInformation.currentCity
+                infoVC.userGender = user.persone.shortInformation.gender.rawValue
+                infoVC.userPet = user.persone.shortInformation.pet.rawValue
+                infoVC.userProfileImage = user.persone.foto.mainProfileFoto
                 
                 infoVC.user = user
             }

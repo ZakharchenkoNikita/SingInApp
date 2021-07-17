@@ -18,10 +18,15 @@ extension User {
                 password: "p",
                 persone: Persone(name: "Nikita",
                                  surmane: "Zakharchenko",
-                                 age: 22,
-                                 gender: .male,
-                                 familyStatus: .haveAPartner,
-                                 currentCity: "Кёльн",
-                                 pet: .cat))
+                                 shortInformation:
+                                    ShortInformation(age: 22,
+                                                     gender: .male,
+                                                     familyStatus: .haveAPartner,
+                                                     currentCity: "Кёльн",
+                                                     pet: .parrot),
+                                 moreInformation:
+                                    MoreInformation(aboutMe: "Я красивый."),
+                                 foto:
+                                    PersoneFoto(mainProfileFoto: "profileImage")))
     }
 }

@@ -8,9 +8,7 @@
 struct Persone {
     let name: String
     let surmane: String
-    let age: Int
-    let gender: Gender
-    let familyStatus: FamilyStatus
-    let currentCity: String
-    let pet: PetType
+    let shortInformation: ShortInformation
+    let moreInformation: MoreInformation
+    let foto: PersoneFoto
 }

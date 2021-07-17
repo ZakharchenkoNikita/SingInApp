@@ -268,12 +268,22 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hwq-jr-omG">
+                                <rect key="frame" x="110" y="105.5" width="100" height="97.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="UaH-1G-uIj"/>
+                                    <constraint firstAttribute="width" constant="100" id="xey-kD-oNl"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6XG-f3-TIJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="x9m-vb-g0V" firstAttribute="leading" secondItem="6XG-f3-TIJ" secondAttribute="leading" constant="20" id="8DR-Al-Y1a"/>
+                            <constraint firstItem="x9m-vb-g0V" firstAttribute="top" secondItem="hwq-jr-omG" secondAttribute="bottom" constant="20" id="Bt6-aA-SyD"/>
                             <constraint firstItem="6T7-6D-PtC" firstAttribute="leading" secondItem="6XG-f3-TIJ" secondAttribute="leading" constant="70" id="F4H-dD-KU4"/>
+                            <constraint firstItem="6XG-f3-TIJ" firstAttribute="trailing" secondItem="hwq-jr-omG" secondAttribute="trailing" constant="110" id="UJL-HP-PLZ"/>
+                            <constraint firstItem="hwq-jr-omG" firstAttribute="leading" secondItem="6XG-f3-TIJ" secondAttribute="leading" constant="110" id="XG2-QO-khe"/>
                             <constraint firstItem="6XG-f3-TIJ" firstAttribute="bottom" secondItem="6T7-6D-PtC" secondAttribute="bottom" constant="50" id="YQL-y8-sEJ"/>
                             <constraint firstItem="6XG-f3-TIJ" firstAttribute="trailing" secondItem="6T7-6D-PtC" secondAttribute="trailing" constant="70" id="dpV-cw-ikB"/>
                             <constraint firstItem="6XG-f3-TIJ" firstAttribute="trailing" secondItem="x9m-vb-g0V" secondAttribute="trailing" constant="20" id="jzT-q8-Aue"/>
@@ -288,6 +298,7 @@
                         <outlet property="genderLabel" destination="HYV-pm-dUN" id="Hey-Pk-csB"/>
                         <outlet property="moreInfoButton" destination="6T7-6D-PtC" id="S6P-42-kFc"/>
                         <outlet property="petLabel" destination="qKr-IK-zIt" id="9Pu-mL-6M1"/>
+                        <outlet property="profileImage" destination="hwq-jr-omG" id="ezA-Sx-fXx"/>
                         <segue destination="SG8-gA-h1h" kind="show" identifier="moreInfoVC" id="dQr-u2-FcB"/>
                     </connections>
                 </viewController>
