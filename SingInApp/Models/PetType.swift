@@ -5,8 +5,8 @@
 //  Created by Nikita on 17.07.21.
 //
 
-enum PetType: Character {
-    case dog = "🐶"
-    case cat = "😼"
-    case parrot = "🦜"
+enum PetType: String {
+    case dog = "🐶 собака"
+    case cat = "😼 кошка"
+    case parrot = "🦜 попугай"
 }

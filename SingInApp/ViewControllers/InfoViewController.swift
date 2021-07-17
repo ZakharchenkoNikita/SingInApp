@@ -16,6 +16,7 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var currentCityLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var petLabel: UILabel!
     
     // MARK: properties
     var navigationBarTitle: String!
@@ -23,7 +24,10 @@ class InfoViewController: UIViewController {
     var userFamilyStatus: String!
     var userAge: Int!
     var userCurrentCity: String!
-    var userGender: Character!
+    var userGender: String!
+    var userPet: String!
+    
+    var user: User!
     
     // MARK: override methods
     override func viewDidLoad() {
@@ -32,19 +36,24 @@ class InfoViewController: UIViewController {
         moreInfoButton.layer.cornerRadius = 10
         navigationItem.title = navigationBarTitle
         
-        familyStatusLabel.text = userFamilyStatus
-        ageLabel.text = String(userAge)
-        currentCityLabel.text = userCurrentCity
-        genderLabel.text = String(userGender)
+        getUserInfo()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let moreInfoVC = segue.destination as? MoreInfoViewController else { return }
-        
-        moreInfoVC.navigationBarTitle = navigationBarTitle
     }
-    
+
+    // MARK: IBAction
     @IBAction func moreInfoButtonPressed() {
         performSegue(withIdentifier: "moreInfoVC", sender: nil)
+    }
+    
+    // MARK: private methods
+    private func getUserInfo() {
+        familyStatusLabel.text = userFamilyStatus
+        ageLabel.text = String(userAge)
+        currentCityLabel.text = userCurrentCity
+        genderLabel.text = userGender
+        petLabel.text = userPet
     }
 }

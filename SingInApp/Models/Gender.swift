@@ -5,8 +5,8 @@
 //  Created by Nikita on 16.07.21.
 //
 
-enum Gender: Character {
-    case male = "🦸‍♂️"
-    case female = "🦸‍♀️"
-    case neutral = "🦸"
+enum Gender: String {
+    case male = "🦸‍♂️ мужской"
+    case female = "🦸‍♀️ женский"
+    case neutral = "🦸 нейтральный"
 }

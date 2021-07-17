@@ -11,7 +11,6 @@ class ProfileViewController: UIViewController {
     
     // MARK: IBOutlets
     @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var logOutButton: UIButton!
     
     // MARK: public properties
@@ -22,7 +21,6 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         logOutButton.layer.cornerRadius = 10
-        genderLabel.text = userGender
         userNameLabel.text = "Welcome, \(userName ?? "")!"
         tabBarItem.title = userName
     }

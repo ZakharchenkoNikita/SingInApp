@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1759" y="93"/>
+            <point key="canvasLocation" x="-1763" y="93"/>
         </scene>
         <!--Profile-->
         <scene sceneID="zzq-wL-cIZ">
@@ -140,7 +140,6 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" selectedImage="person" id="gBy-gY-nPg"/>
                     <navigationItem key="navigationItem" id="Mwy-rj-kH6"/>
                     <connections>
-                        <outlet property="genderLabel" destination="Jxm-bY-E7h" id="5pv-TD-vfW"/>
                         <outlet property="logOutButton" destination="tPY-Q9-Ywe" id="Kqc-NK-ULY"/>
                         <outlet property="userNameLabel" destination="jQy-gz-W6o" id="Gp4-ac-K0x"/>
                     </connections>
@@ -170,10 +169,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="x9m-vb-g0V">
-                                <rect key="frame" x="20" y="236.5" width="280" height="95"/>
+                                <rect key="frame" x="20" y="224" width="280" height="120"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="B2Y-Ha-uea">
-                                        <rect key="frame" x="0.0" y="0.0" width="39.5" height="95"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="39.5" height="120"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wyz-pH-nLM">
                                                 <rect key="frame" x="0.0" y="0.5" width="39.5" height="19"/>
@@ -191,10 +190,14 @@
                                                 <rect key="frame" x="0.0" y="75.5" width="39.5" height="18"/>
                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ladybug.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yrE-Mz-2QN">
+                                                <rect key="frame" x="0.0" y="99" width="39.5" height="22"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dyG-9H-0mn">
-                                        <rect key="frame" x="44.5" y="1" width="161" height="93"/>
+                                        <rect key="frame" x="44.5" y="1.5" width="161" height="117.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oty-DR-PWj">
                                                 <rect key="frame" x="0.0" y="0.0" width="161" height="19.5"/>
@@ -220,10 +223,16 @@
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pet:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU2-9r-leV">
+                                                <rect key="frame" x="0.0" y="98" width="161" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="c3W-75-Mdf">
-                                        <rect key="frame" x="210.5" y="1" width="69.5" height="93"/>
+                                        <rect key="frame" x="210.5" y="1.5" width="69.5" height="117.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjw-aI-Sx2">
                                                 <rect key="frame" x="0.0" y="0.0" width="69.5" height="19.5"/>
@@ -245,6 +254,12 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYV-pm-dUN">
                                                 <rect key="frame" x="0.0" y="73.5" width="69.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKr-IK-zIt">
+                                                <rect key="frame" x="0.0" y="98" width="69.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
@@ -272,6 +287,7 @@
                         <outlet property="familyStatusLabel" destination="Wjw-aI-Sx2" id="ZC8-DK-TEq"/>
                         <outlet property="genderLabel" destination="HYV-pm-dUN" id="Hey-Pk-csB"/>
                         <outlet property="moreInfoButton" destination="6T7-6D-PtC" id="S6P-42-kFc"/>
+                        <outlet property="petLabel" destination="qKr-IK-zIt" id="9Pu-mL-6M1"/>
                         <segue destination="SG8-gA-h1h" kind="show" identifier="moreInfoVC" id="dQr-u2-FcB"/>
                     </connections>
                 </viewController>
@@ -299,10 +315,18 @@
                                     <action selector="moreInfoButtonPressed" destination="ftU-H9-P6H" eventType="touchUpInside" id="3Me-lx-yhz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGb-nK-m42">
+                                <rect key="frame" x="139" y="273.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tDq-z4-lgF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="dGb-nK-m42" firstAttribute="centerX" secondItem="QjT-tX-hDW" secondAttribute="centerX" id="2CV-ka-C75"/>
+                            <constraint firstItem="dGb-nK-m42" firstAttribute="centerY" secondItem="QjT-tX-hDW" secondAttribute="centerY" id="H9S-Hs-l8f"/>
                             <constraint firstItem="tDq-z4-lgF" firstAttribute="bottom" secondItem="34y-z2-V06" secondAttribute="bottom" constant="50" id="V32-av-FZj"/>
                             <constraint firstItem="34y-z2-V06" firstAttribute="leading" secondItem="tDq-z4-lgF" secondAttribute="leading" constant="70" id="VOE-XJ-JOd"/>
                             <constraint firstItem="tDq-z4-lgF" firstAttribute="trailing" secondItem="34y-z2-V06" secondAttribute="trailing" constant="70" id="dli-9S-4OF"/>
@@ -311,6 +335,7 @@
                     <navigationItem key="navigationItem" id="XAc-U0-rBq"/>
                     <connections>
                         <outlet property="galleryButton" destination="34y-z2-V06" id="Eme-b1-bmh"/>
+                        <outlet property="testLabel" destination="dGb-nK-m42" id="Ydj-we-AcE"/>
                         <segue destination="LZP-hs-7nm" kind="show" identifier="galleryVC" id="EXE-Gh-3ci"/>
                     </connections>
                 </viewController>
@@ -378,6 +403,7 @@
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="ladybug.fill" catalog="system" width="128" height="128"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="person.fill.questionmark" catalog="system" width="128" height="104"/>

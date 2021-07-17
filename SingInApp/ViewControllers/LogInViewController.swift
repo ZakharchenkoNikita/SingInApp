@@ -31,28 +31,6 @@ class LogInViewController: UIViewController {
         forgotPasswordTitleLabel.titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
-    // MARK: Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let tabBarController = segue.destination as? UITabBarController else { return }
-        
-        for viewController in tabBarController.viewControllers ?? [] {
-            let fullName = "\(user.persone.name) \(user.persone.surmane)"
-
-            if let profileVC = viewController as? ProfileViewController {
-                profileVC.userName = fullName
-                profileVC.userGender = String(user.persone.gender.rawValue)
-            } else if let navigationController = viewController as? UINavigationController {
-                let infoVC = navigationController.topViewController as! InfoViewController
-                
-                infoVC.navigationBarTitle = fullName
-                infoVC.userFamilyStatus = user.persone.familyStatus.rawValue
-                infoVC.userAge = user.persone.age
-                infoVC.userCurrentCity = user.persone.currentCity
-                infoVC.userGender = user.persone.gender.rawValue
-            }
-        }
-    }
-    
     // MARK: IBActions
     @IBAction func showForgotUserName() {
         callAlert(with: "Oooops!", message: "Your login: Nikita")
@@ -107,5 +85,33 @@ extension LogInViewController: UITextFieldDelegate {
         }
         
         return true
+    }
+}
+
+// MARK: Navigation
+extension LogInViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        
+        let fullName = "\(user.persone.name) \(user.persone.surmane)"
+        
+        for viewController in tabBarController.viewControllers ?? [] {
+
+            if let profileVC = viewController as? ProfileViewController {
+                profileVC.userName = fullName
+            } else if let navigationController = viewController as? UINavigationController {
+                let infoVC = navigationController.topViewController as! InfoViewController
+                infoVC.navigationBarTitle = fullName
+                
+                infoVC.userFamilyStatus = user.persone.familyStatus.rawValue
+                infoVC.userAge = user.persone.age
+                infoVC.userCurrentCity = user.persone.currentCity
+                infoVC.userGender = user.persone.gender.rawValue
+                infoVC.userPet = user.persone.pet.rawValue
+                
+                infoVC.user = user
+            }
+        }
     }
 }
