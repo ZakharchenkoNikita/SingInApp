@@ -43,8 +43,7 @@ class InfoViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        profileImage.layer.cornerRadius = profileImage.frame.size.height / 2
-        profileImage.clipsToBounds = true
+        prepareProfileImage()
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -64,5 +63,15 @@ class InfoViewController: UIViewController {
         genderLabel.text = userGender
         petLabel.text = userPet
         profileImage.image = UIImage(named: userProfileImage)
+    }
+}
+
+// MARK: work with ProfileImage
+extension InfoViewController {
+    private func prepareProfileImage() {
+        profileImage.image = UIImage(named: userProfileImage)
+        profileImage.layer.cornerRadius = 10
+        profileImage.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        profileImage.layer.borderWidth = 1
     }
 }
