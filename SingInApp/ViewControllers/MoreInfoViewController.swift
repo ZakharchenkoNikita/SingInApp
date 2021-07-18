@@ -20,15 +20,32 @@ class MoreInfoViewController: UIViewController {
     @IBOutlet weak var aboutMeLabel: UILabel!
     
     // MARK: properties
-    var navigationBarTitle: String!
+    var userPosition: String!
+    var userRelatives: String!
+    var userFavoriteBook: String!
+    var userFavoriteMusician: String!
+    var userFavoriteFilm: String!
+    var userAboutMe: String!
     
     // MARK: override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         galleryButton.layer.cornerRadius = 10
-        
+        getUserMoreInfo()
     }
+    
+    // MARK: IBAction
     @IBAction func galleryButtonPressed() {
         performSegue(withIdentifier: "galleryVC", sender: nil)
+    }
+    
+    // MARK: private methods
+    private func getUserMoreInfo() {
+        positionLabel.text = userPosition
+        relativesLabel.text = userRelatives
+        favoriteBookLabel.text = userFavoriteBook
+        favoriteMusicianLabel.text = userFavoriteMusician
+        favoriteFilmLabel.text = userFavoriteFilm
+        aboutMeLabel.text = userAboutMe
     }
 }
