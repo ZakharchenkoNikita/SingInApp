@@ -13,6 +13,13 @@ struct User {
 
 extension User {
     static func getInfo() -> User {
+        // я не знал, где мне впихнуть это заполнение, ибо я не хотел руками прописывать. Жду совет. 
+        var images: [String] = []
+        
+        for image in 0...10 {
+            images.append("galleryImage\(image)")
+        }
+        
         return User(
                 login: "n",
                 password: "p",
@@ -25,10 +32,14 @@ extension User {
                                                      currentCity: "Кёльн",
                                                      pet: .parrot),
                                  moreInformation:
-                                    MoreInformation(workPlace: "Я красивый.",
+                                    MoreInformation(workPlace: "Интернет-продавец",
                                                     relatives: .sister,
-                                                    aboutMe: "!"),
+                                                    favoriteBook: "1984",
+                                                    favoriteMusician: "Max Korzh",
+                                                    favoriteFilm: "Бойцовский клуб",
+                                                    aboutMe: "Молодой, амбициозный. Увлекаюсь ездой на велосипеде. Мечтаю работать в IT сфере плечом к плечу с профессионалами."),
                                  foto:
-                                    PersoneFoto(mainProfileFoto: "profileImage")))
+                                    PersoneFoto(mainProfileFoto: "galleryImage0",
+                                                photoGallery: PhotoGallery(images: images))))
     }
 }

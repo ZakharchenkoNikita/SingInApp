@@ -45,12 +45,6 @@ class InfoViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         prepareProfileImage()
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let moreInfoVC = segue.destination as? MoreInfoViewController else { return }
-        
-        moreInfoVC.navigationBarTitle = user.persone.moreInformation.aboutMe
-    }
 
     // MARK: IBAction
     @IBAction func moreInfoButtonPressed() {
@@ -68,8 +62,25 @@ class InfoViewController: UIViewController {
     }
 }
 
+// MARK: Navigation
+extension InfoViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let moreInfoVC = segue.destination as? MoreInfoViewController else { return }
+        
+        moreInfoVC.userPosition = user.persone.moreInformation.workPlace
+        moreInfoVC.userRelatives = user.persone.moreInformation.relatives.rawValue
+        moreInfoVC.userFavoriteBook = user.persone.moreInformation.favoriteBook
+        moreInfoVC.userFavoriteMusician = user.persone.moreInformation.favoriteMusician
+        moreInfoVC.userFavoriteFilm = user.persone.moreInformation.favoriteFilm
+        moreInfoVC.userAboutMe = user.persone.moreInformation.aboutMe
+        
+        moreInfoVC.user = user
+    }
+}
+
 // MARK: work with ProfileImage
 extension InfoViewController {
+    
     private func prepareProfileImage() {
         profileImage.image = UIImage(named: userProfileImage)
         profileImage.layer.cornerRadius = 10

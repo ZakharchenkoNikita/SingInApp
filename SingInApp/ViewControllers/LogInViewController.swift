@@ -24,7 +24,6 @@ class LogInViewController: UIViewController {
     // MARK: override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loginButton.layer.cornerRadius = 10
         
         forgotUserNameTitleLabel.titleLabel?.adjustsFontSizeToFitWidth = true
@@ -73,6 +72,7 @@ class LogInViewController: UIViewController {
 extension LogInViewController: UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
