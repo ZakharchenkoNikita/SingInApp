@@ -11,7 +11,13 @@ class MoreInfoViewController: UIViewController {
     
     // MARK: IBOutlets
     @IBOutlet weak var galleryButton: UIButton!
-    @IBOutlet weak var testLabel: UILabel!
+    
+    @IBOutlet weak var positionLabel: UILabel!
+    @IBOutlet weak var relativesLabel: UILabel!
+    @IBOutlet weak var favoriteBookLabel: UILabel!
+    @IBOutlet weak var favoriteMusicianLabel: UILabel!
+    @IBOutlet weak var favoriteFilmLabel: UILabel!
+    @IBOutlet weak var aboutMeLabel: UILabel!
     
     // MARK: properties
     var navigationBarTitle: String!
@@ -20,7 +26,7 @@ class MoreInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         galleryButton.layer.cornerRadius = 10
-        testLabel.text = navigationBarTitle
+        
     }
     @IBAction func galleryButtonPressed() {
         performSegue(withIdentifier: "galleryVC", sender: nil)
