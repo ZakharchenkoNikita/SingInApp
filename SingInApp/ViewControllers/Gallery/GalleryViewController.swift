@@ -18,6 +18,7 @@ class GalleryViewController: UIViewController {
     // MARK: override methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         collectionView.delegate = self
         collectionView.dataSource = self
     }
