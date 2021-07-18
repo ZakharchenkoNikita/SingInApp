@@ -8,16 +8,27 @@
 struct User {
     let login: String
     let password: String
-    let profile: [Profile]
+    let persone: Persone
 }
 
 extension User {
-    static func getInfo() -> [User] {
-        return [
-            User(
-                login: "Nikita",
-                password: "pass",
-                profile: [Profile(name: "Никита", surmane: "Захарченко", age: 22)])
-        ]
+    static func getInfo() -> User {
+        return User(
+                login: "n",
+                password: "p",
+                persone: Persone(name: "Nikita",
+                                 surmane: "Zakharchenko",
+                                 shortInformation:
+                                    ShortInformation(age: 22,
+                                                     gender: .male,
+                                                     familyStatus: .haveAPartner,
+                                                     currentCity: "Кёльн",
+                                                     pet: .parrot),
+                                 moreInformation:
+                                    MoreInformation(workPlace: "Я красивый.",
+                                                    relatives: .sister,
+                                                    aboutMe: "!"),
+                                 foto:
+                                    PersoneFoto(mainProfileFoto: "profileImage")))
     }
 }

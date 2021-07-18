@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1125B9F726A180FF00B7EC70 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125B9F626A180FF00B7EC70 /* User.swift */; };
-		1125B9F926A1813500B7EC70 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125B9F826A1813500B7EC70 /* Profile.swift */; };
+		1125B9F926A1813500B7EC70 /* Persone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125B9F826A1813500B7EC70 /* Persone.swift */; };
+		1125B9FB26A1A6CC00B7EC70 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125B9FA26A1A6CC00B7EC70 /* InfoViewController.swift */; };
+		1125B9FD26A1C18C00B7EC70 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125B9FC26A1C18C00B7EC70 /* MoreInfoViewController.swift */; };
+		1125B9FF26A1C67D00B7EC70 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125B9FE26A1C67D00B7EC70 /* GalleryViewController.swift */; };
+		1125BA0126A1CC5B00B7EC70 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125BA0026A1CC5B00B7EC70 /* Gender.swift */; };
 		11568B26269CDF76008421AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11568B25269CDF76008421AC /* AppDelegate.swift */; };
 		11568B28269CDF76008421AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11568B27269CDF76008421AC /* SceneDelegate.swift */; };
 		11568B2D269CDF76008421AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11568B2B269CDF76008421AC /* Main.storyboard */; };
@@ -16,11 +20,21 @@
 		11568B32269CDF77008421AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11568B30269CDF77008421AC /* LaunchScreen.storyboard */; };
 		11568B3A269CE1B1008421AC /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11568B39269CE1B1008421AC /* LogInViewController.swift */; };
 		11568B3C269CE1D4008421AC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11568B3B269CE1D4008421AC /* ProfileViewController.swift */; };
+		11D9EBD526A3261B00B6A3C3 /* PersoneFoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9EBD426A3261B00B6A3C3 /* PersoneFoto.swift */; };
+		11D9EBD726A3461900B6A3C3 /* ShortInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9EBD626A3461900B6A3C3 /* ShortInformation.swift */; };
+		11D9EBD926A3476600B6A3C3 /* MoreInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9EBD826A3476600B6A3C3 /* MoreInformation.swift */; };
+		11D9EBDB26A428BB00B6A3C3 /* Relatives.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9EBDA26A428BB00B6A3C3 /* Relatives.swift */; };
+		11ED669126A2D14300026A93 /* FamilyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ED669026A2D14300026A93 /* FamilyStatus.swift */; };
+		11ED669326A2F82600026A93 /* PetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ED669226A2F82600026A93 /* PetType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1125B9F626A180FF00B7EC70 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		1125B9F826A1813500B7EC70 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		1125B9F826A1813500B7EC70 /* Persone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persone.swift; sourceTree = "<group>"; };
+		1125B9FA26A1A6CC00B7EC70 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		1125B9FC26A1C18C00B7EC70 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
+		1125B9FE26A1C67D00B7EC70 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		1125BA0026A1CC5B00B7EC70 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		11568B22269CDF76008421AC /* SingInApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingInApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11568B25269CDF76008421AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11568B27269CDF76008421AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +44,12 @@
 		11568B33269CDF77008421AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11568B39269CE1B1008421AC /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		11568B3B269CE1D4008421AC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		11D9EBD426A3261B00B6A3C3 /* PersoneFoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersoneFoto.swift; sourceTree = "<group>"; };
+		11D9EBD626A3461900B6A3C3 /* ShortInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortInformation.swift; sourceTree = "<group>"; };
+		11D9EBD826A3476600B6A3C3 /* MoreInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInformation.swift; sourceTree = "<group>"; };
+		11D9EBDA26A428BB00B6A3C3 /* Relatives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relatives.swift; sourceTree = "<group>"; };
+		11ED669026A2D14300026A93 /* FamilyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyStatus.swift; sourceTree = "<group>"; };
+		11ED669226A2F82600026A93 /* PetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +68,9 @@
 			children = (
 				11568B39269CE1B1008421AC /* LogInViewController.swift */,
 				11568B3B269CE1D4008421AC /* ProfileViewController.swift */,
+				1125B9FA26A1A6CC00B7EC70 /* InfoViewController.swift */,
+				1125B9FC26A1C18C00B7EC70 /* MoreInfoViewController.swift */,
+				1125B9FE26A1C67D00B7EC70 /* GalleryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -65,7 +88,14 @@
 			isa = PBXGroup;
 			children = (
 				1125B9F626A180FF00B7EC70 /* User.swift */,
-				1125B9F826A1813500B7EC70 /* Profile.swift */,
+				1125B9F826A1813500B7EC70 /* Persone.swift */,
+				1125BA0026A1CC5B00B7EC70 /* Gender.swift */,
+				11ED669026A2D14300026A93 /* FamilyStatus.swift */,
+				11ED669226A2F82600026A93 /* PetType.swift */,
+				11D9EBD426A3261B00B6A3C3 /* PersoneFoto.swift */,
+				11D9EBD626A3461900B6A3C3 /* ShortInformation.swift */,
+				11D9EBD826A3476600B6A3C3 /* MoreInformation.swift */,
+				11D9EBDA26A428BB00B6A3C3 /* Relatives.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,9 +209,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				11568B26269CDF76008421AC /* AppDelegate.swift in Sources */,
-				1125B9F926A1813500B7EC70 /* Profile.swift in Sources */,
+				1125B9F926A1813500B7EC70 /* Persone.swift in Sources */,
 				11568B28269CDF76008421AC /* SceneDelegate.swift in Sources */,
+				11ED669126A2D14300026A93 /* FamilyStatus.swift in Sources */,
+				1125B9FB26A1A6CC00B7EC70 /* InfoViewController.swift in Sources */,
 				11568B3C269CE1D4008421AC /* ProfileViewController.swift in Sources */,
+				1125B9FD26A1C18C00B7EC70 /* MoreInfoViewController.swift in Sources */,
+				11ED669326A2F82600026A93 /* PetType.swift in Sources */,
+				1125BA0126A1CC5B00B7EC70 /* Gender.swift in Sources */,
+				11D9EBDB26A428BB00B6A3C3 /* Relatives.swift in Sources */,
+				11D9EBD526A3261B00B6A3C3 /* PersoneFoto.swift in Sources */,
+				1125B9FF26A1C67D00B7EC70 /* GalleryViewController.swift in Sources */,
+				11D9EBD926A3476600B6A3C3 /* MoreInformation.swift in Sources */,
+				11D9EBD726A3461900B6A3C3 /* ShortInformation.swift in Sources */,
 				1125B9F726A180FF00B7EC70 /* User.swift in Sources */,
 				11568B3A269CE1B1008421AC /* LogInViewController.swift in Sources */,
 			);
