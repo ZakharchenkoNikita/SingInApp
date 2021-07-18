@@ -62,7 +62,7 @@ class InfoViewController: UIViewController {
     }
 }
 
-// MARK: work with ProfileImage
+// MARK: Navigation
 extension InfoViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let moreInfoVC = segue.destination as? MoreInfoViewController else { return }
@@ -76,6 +76,10 @@ extension InfoViewController {
         
         moreInfoVC.user = user
     }
+}
+
+// MARK: work with ProfileImage
+extension InfoViewController {
     
     private func prepareProfileImage() {
         profileImage.image = UIImage(named: userProfileImage)

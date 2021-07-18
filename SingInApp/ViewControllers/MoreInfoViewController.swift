@@ -33,6 +33,7 @@ class MoreInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         galleryButton.layer.cornerRadius = 10
+        
         getUserMoreInfo()
     }
     
@@ -54,7 +55,6 @@ class MoreInfoViewController: UIViewController {
 
 // MARK: Navigation
 extension MoreInfoViewController {
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let galleryVC = segue.destination as? GalleryViewController else { return }
         
