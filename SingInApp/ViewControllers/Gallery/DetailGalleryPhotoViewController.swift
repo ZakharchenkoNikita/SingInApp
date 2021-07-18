@@ -18,6 +18,7 @@ class DetailGalleryPhotoViewController: UIViewController {
     // MARK: override methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         detailGalleryPhoto.image = image
     }
 }
