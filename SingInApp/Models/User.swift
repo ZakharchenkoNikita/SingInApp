@@ -13,9 +13,10 @@ struct User {
 
 extension User {
     static func getInfo() -> User {
+        // я не знал, где мне впихнуть это заполнение, ибо я не хотел руками прописывать. Жду совет. 
         var images: [String] = []
         
-        for image in 0...2 {
+        for image in 0...17 {
             images.append("galleryImage\(image)")
         }
         
@@ -36,9 +37,9 @@ extension User {
                                                     favoriteBook: "1984",
                                                     favoriteMusician: "Max Korzh",
                                                     favoriteFilm: "Бойцовский клуб",
-                                                    aboutMe: "Молодой амбициозный. Увлекаюсь ездой на велосипеде. Мечтаю работать в IT сфере плечом к плечу с профессионалами."),
+                                                    aboutMe: "Молодой, амбициозный. Увлекаюсь ездой на велосипеде. Мечтаю работать в IT сфере плечом к плечу с профессионалами."),
                                  foto:
-                                    PersoneFoto(mainProfileFoto: "galleryImage1",
+                                    PersoneFoto(mainProfileFoto: "galleryImage0",
                                                 photoGallery: PhotoGallery(images: images))))
     }
 }

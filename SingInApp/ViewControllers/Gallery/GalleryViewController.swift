@@ -13,16 +13,22 @@ class GalleryViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: properties
-    
     var user: User!
-//    let photoGallery = PhotoGallery()
     
     // MARK: override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetailGalleryPhoto" {
+            let detailGalleryPhotoVC = segue.destination as! DetailGalleryPhotoViewController
+            let cell = sender as! GalleryPhotoCollectionViewCell
+            
+            detailGalleryPhotoVC.image = cell.galleryPhotoImage.image
+        }
     }
 }
 
@@ -40,4 +46,24 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemsPerRow: CGFloat = 2
+        let paddingWidth = 2 * (itemsPerRow + 1)
+        let availableWidth = collectionView.frame.width - paddingWidth
+        let widthPerItem = availableWidth / itemsPerRow
+
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        2
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        2
+    }
 }
