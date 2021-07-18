@@ -7,5 +7,5 @@
 
 struct PersoneFoto {
     let mainProfileFoto: String
-//    let mainAlbum: MainAlbum
+//    let photoGallery: PhotoGallery
 }

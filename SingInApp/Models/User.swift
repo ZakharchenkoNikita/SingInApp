@@ -32,6 +32,6 @@ extension User {
                                                     favoriteFilm: "Бойцовский клуб",
                                                     aboutMe: "Молодой амбициозный. Увлекаюсь ездой на велосипеде. Мечтаю работать в IT сфере плечом к плечу с профессионалами."),
                                  foto:
-                                    PersoneFoto(mainProfileFoto: "profileImage")))
+                                    PersoneFoto(mainProfileFoto: "galleryImage1")))
     }
 }
