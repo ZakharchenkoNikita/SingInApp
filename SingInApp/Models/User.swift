@@ -16,7 +16,7 @@ extension User {
         // я не знал, где мне впихнуть это заполнение, ибо я не хотел руками прописывать. Жду совет. 
         var images: [String] = []
         
-        for image in 0...17 {
+        for image in 0...10 {
             images.append("galleryImage\(image)")
         }
         
