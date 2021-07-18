@@ -13,6 +13,12 @@ struct User {
 
 extension User {
     static func getInfo() -> User {
+        var images: [String] = []
+        
+        for image in 0...2 {
+            images.append("galleryImage\(image)")
+        }
+        
         return User(
                 login: "n",
                 password: "p",
@@ -32,6 +38,7 @@ extension User {
                                                     favoriteFilm: "Бойцовский клуб",
                                                     aboutMe: "Молодой амбициозный. Увлекаюсь ездой на велосипеде. Мечтаю работать в IT сфере плечом к плечу с профессионалами."),
                                  foto:
-                                    PersoneFoto(mainProfileFoto: "galleryImage1")))
+                                    PersoneFoto(mainProfileFoto: "galleryImage1",
+                                                photoGallery: PhotoGallery(images: images))))
     }
 }

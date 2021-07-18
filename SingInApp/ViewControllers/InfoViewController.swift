@@ -73,6 +73,8 @@ extension InfoViewController {
         moreInfoVC.userFavoriteMusician = user.persone.moreInformation.favoriteMusician
         moreInfoVC.userFavoriteFilm = user.persone.moreInformation.favoriteFilm
         moreInfoVC.userAboutMe = user.persone.moreInformation.aboutMe
+        
+        moreInfoVC.user = user
     }
     
     private func prepareProfileImage() {

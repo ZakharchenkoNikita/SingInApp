@@ -14,7 +14,8 @@ class GalleryViewController: UIViewController {
     
     // MARK: properties
     
-    let photoGallery = PhotoGallery()
+    var user: User!
+//    let photoGallery = PhotoGallery()
     
     // MARK: override methods
     override func viewDidLoad() {
@@ -25,17 +26,17 @@ class GalleryViewController: UIViewController {
     }
 }
 
-// MARK:
+// MARK: work with gallery
 extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        photoGallery.images.count
+        user.persone.foto.photoGallery.images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellGalleryImage", for: indexPath) as! GalleryPhotoCollectionViewCell
     
-        cell.galleryPhotoImage.image = photoGallery.images[indexPath.item]
+        cell.galleryPhotoImage.image = UIImage(named: user.persone.foto.photoGallery.images[indexPath.item])
         return cell
     }
     

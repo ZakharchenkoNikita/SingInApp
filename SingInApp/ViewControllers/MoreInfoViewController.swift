@@ -27,6 +27,8 @@ class MoreInfoViewController: UIViewController {
     var userFavoriteFilm: String!
     var userAboutMe: String!
     
+    var user: User!
+    
     // MARK: override methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,5 +49,15 @@ class MoreInfoViewController: UIViewController {
         favoriteMusicianLabel.text = userFavoriteMusician
         favoriteFilmLabel.text = userFavoriteFilm
         aboutMeLabel.text = userAboutMe
+    }
+}
+
+// MARK: Navigation
+extension MoreInfoViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let galleryVC = segue.destination as? GalleryViewController else { return }
+        
+        galleryVC.user = user
     }
 }
