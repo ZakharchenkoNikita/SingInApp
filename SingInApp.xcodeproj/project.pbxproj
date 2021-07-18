@@ -23,6 +23,7 @@
 		11D9EBD526A3261B00B6A3C3 /* PersoneFoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9EBD426A3261B00B6A3C3 /* PersoneFoto.swift */; };
 		11D9EBD726A3461900B6A3C3 /* ShortInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9EBD626A3461900B6A3C3 /* ShortInformation.swift */; };
 		11D9EBD926A3476600B6A3C3 /* MoreInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9EBD826A3476600B6A3C3 /* MoreInformation.swift */; };
+		11D9EBDB26A428BB00B6A3C3 /* Relatives.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D9EBDA26A428BB00B6A3C3 /* Relatives.swift */; };
 		11ED669126A2D14300026A93 /* FamilyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ED669026A2D14300026A93 /* FamilyStatus.swift */; };
 		11ED669326A2F82600026A93 /* PetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ED669226A2F82600026A93 /* PetType.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		11D9EBD426A3261B00B6A3C3 /* PersoneFoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersoneFoto.swift; sourceTree = "<group>"; };
 		11D9EBD626A3461900B6A3C3 /* ShortInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortInformation.swift; sourceTree = "<group>"; };
 		11D9EBD826A3476600B6A3C3 /* MoreInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInformation.swift; sourceTree = "<group>"; };
+		11D9EBDA26A428BB00B6A3C3 /* Relatives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relatives.swift; sourceTree = "<group>"; };
 		11ED669026A2D14300026A93 /* FamilyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyStatus.swift; sourceTree = "<group>"; };
 		11ED669226A2F82600026A93 /* PetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 				11D9EBD426A3261B00B6A3C3 /* PersoneFoto.swift */,
 				11D9EBD626A3461900B6A3C3 /* ShortInformation.swift */,
 				11D9EBD826A3476600B6A3C3 /* MoreInformation.swift */,
+				11D9EBDA26A428BB00B6A3C3 /* Relatives.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				1125B9FD26A1C18C00B7EC70 /* MoreInfoViewController.swift in Sources */,
 				11ED669326A2F82600026A93 /* PetType.swift in Sources */,
 				1125BA0126A1CC5B00B7EC70 /* Gender.swift in Sources */,
+				11D9EBDB26A428BB00B6A3C3 /* Relatives.swift in Sources */,
 				11D9EBD526A3261B00B6A3C3 /* PersoneFoto.swift in Sources */,
 				1125B9FF26A1C67D00B7EC70 /* GalleryViewController.swift in Sources */,
 				11D9EBD926A3476600B6A3C3 /* MoreInformation.swift in Sources */,

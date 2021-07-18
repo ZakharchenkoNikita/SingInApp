@@ -25,7 +25,9 @@ extension User {
                                                      currentCity: "Кёльн",
                                                      pet: .parrot),
                                  moreInformation:
-                                    MoreInformation(aboutMe: "Я красивый."),
+                                    MoreInformation(workPlace: "Я красивый.",
+                                                    relatives: .sister,
+                                                    aboutMe: "!"),
                                  foto:
                                     PersoneFoto(mainProfileFoto: "profileImage")))
     }

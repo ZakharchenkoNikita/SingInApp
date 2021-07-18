@@ -46,9 +46,11 @@ class InfoViewController: UIViewController {
         prepareProfileImage()
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let moreInfoVC = segue.destination as? MoreInfoViewController else { return }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let moreInfoVC = segue.destination as? MoreInfoViewController else { return }
+        
+        moreInfoVC.navigationBarTitle = user.persone.moreInformation.aboutMe
+    }
 
     // MARK: IBAction
     @IBAction func moreInfoButtonPressed() {
