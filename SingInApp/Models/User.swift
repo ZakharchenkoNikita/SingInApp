@@ -21,8 +21,8 @@ extension User {
         }
         
         return User(
-                login: "n",
-                password: "p",
+                login: "Nikita",
+                password: "pass",
                 persone: Persone(name: "Nikita",
                                  surmane: "Zakharchenko",
                                  shortInformation:
