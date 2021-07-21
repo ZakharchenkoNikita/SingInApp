@@ -13,7 +13,6 @@ struct User {
 
 extension User {
     static func getInfo() -> User {
-        // я не знал, где мне впихнуть это заполнение, ибо я не хотел руками прописывать. Жду совет. 
         var images: [String] = []
         
         for image in 0...10 {

@@ -21,15 +21,6 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     
     // MARK: properties
-    var navigationBarTitle: String!
-    
-    var userFamilyStatus: String!
-    var userAge: Int!
-    var userCurrentCity: String!
-    var userGender: String!
-    var userPet: String!
-    var userProfileImage: String!
-    
     var user: User!
     
     // MARK: override methods
@@ -37,7 +28,7 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
         
         moreInfoButton.layer.cornerRadius = 10
-        navigationItem.title = navigationBarTitle
+        navigationItem.title = user.persone.fullName
         
         getUserInfo()
     }
@@ -53,12 +44,12 @@ class InfoViewController: UIViewController {
     
     // MARK: private methods
     private func getUserInfo() {
-        familyStatusLabel.text = userFamilyStatus
-        ageLabel.text = String(userAge)
-        currentCityLabel.text = userCurrentCity
-        genderLabel.text = userGender
-        petLabel.text = userPet
-        profileImage.image = UIImage(named: userProfileImage)
+        familyStatusLabel.text = user.persone.moreInformation.relatives.rawValue
+        ageLabel.text = String(user.persone.shortInformation.age)
+        currentCityLabel.text = user.persone.shortInformation.currentCity
+        genderLabel.text = user.persone.shortInformation.gender.rawValue
+        petLabel.text = user.persone.shortInformation.pet.rawValue
+        profileImage.image = UIImage(named: user.persone.foto.mainProfileFoto)
     }
 }
 
@@ -66,14 +57,6 @@ class InfoViewController: UIViewController {
 extension InfoViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let moreInfoVC = segue.destination as? MoreInfoViewController else { return }
-        
-        moreInfoVC.userPosition = user.persone.moreInformation.workPlace
-        moreInfoVC.userRelatives = user.persone.moreInformation.relatives.rawValue
-        moreInfoVC.userFavoriteBook = user.persone.moreInformation.favoriteBook
-        moreInfoVC.userFavoriteMusician = user.persone.moreInformation.favoriteMusician
-        moreInfoVC.userFavoriteFilm = user.persone.moreInformation.favoriteFilm
-        moreInfoVC.userAboutMe = user.persone.moreInformation.aboutMe
-        
         moreInfoVC.user = user
     }
 }
@@ -82,7 +65,7 @@ extension InfoViewController {
 extension InfoViewController {
     
     private func prepareProfileImage() {
-        profileImage.image = UIImage(named: userProfileImage)
+        profileImage.image = UIImage(named: user.persone.foto.mainProfileFoto)
         profileImage.layer.cornerRadius = 10
         profileImage.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         profileImage.layer.borderWidth = 1

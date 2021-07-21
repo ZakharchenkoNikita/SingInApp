@@ -14,14 +14,13 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var logOutButton: UIButton!
     
     // MARK: public properties
-    var userName: String!
-    var userGender: String!
+    var user: User!
     
     // MARK: override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         logOutButton.layer.cornerRadius = 10
-        userNameLabel.text = "Welcome, \(userName ?? "")!"
-        tabBarItem.title = userName
+        userNameLabel.text = "Welcome, \(user.persone.fullName)!"
+        tabBarItem.title = user.persone.fullName
     }
 }

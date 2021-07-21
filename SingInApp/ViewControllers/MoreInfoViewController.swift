@@ -20,13 +20,6 @@ class MoreInfoViewController: UIViewController {
     @IBOutlet weak var aboutMeLabel: UILabel!
     
     // MARK: properties
-    var userPosition: String!
-    var userRelatives: String!
-    var userFavoriteBook: String!
-    var userFavoriteMusician: String!
-    var userFavoriteFilm: String!
-    var userAboutMe: String!
-    
     var user: User!
     
     // MARK: override methods
@@ -44,12 +37,12 @@ class MoreInfoViewController: UIViewController {
     
     // MARK: private methods
     private func getUserMoreInfo() {
-        positionLabel.text = userPosition
-        relativesLabel.text = userRelatives
-        favoriteBookLabel.text = userFavoriteBook
-        favoriteMusicianLabel.text = userFavoriteMusician
-        favoriteFilmLabel.text = userFavoriteFilm
-        aboutMeLabel.text = userAboutMe
+        positionLabel.text = user.persone.moreInformation.workPlace
+        relativesLabel.text = user.persone.moreInformation.relatives.rawValue
+        favoriteBookLabel.text = user.persone.moreInformation.favoriteBook
+        favoriteMusicianLabel.text = user.persone.moreInformation.favoriteMusician
+        favoriteFilmLabel.text = user.persone.moreInformation.favoriteFilm
+        aboutMeLabel.text = user.persone.moreInformation.aboutMe
     }
 }
 
@@ -57,7 +50,6 @@ class MoreInfoViewController: UIViewController {
 extension MoreInfoViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let galleryVC = segue.destination as? GalleryViewController else { return }
-        
         galleryVC.user = user
     }
 }

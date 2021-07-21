@@ -94,23 +94,12 @@ extension LogInViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
         
-        let fullName = "\(user.persone.name) \(user.persone.surmane)"
-        
         for viewController in tabBarController.viewControllers ?? [] {
 
             if let profileVC = viewController as? ProfileViewController {
-                profileVC.userName = fullName
+                profileVC.user = user
             } else if let navigationController = viewController as? UINavigationController {
-                let infoVC = navigationController.topViewController as! InfoViewController
-                infoVC.navigationBarTitle = fullName
-                
-                infoVC.userFamilyStatus = user.persone.shortInformation.familyStatus.rawValue
-                infoVC.userAge = user.persone.shortInformation.age
-                infoVC.userCurrentCity = user.persone.shortInformation.currentCity
-                infoVC.userGender = user.persone.shortInformation.gender.rawValue
-                infoVC.userPet = user.persone.shortInformation.pet.rawValue
-                infoVC.userProfileImage = user.persone.foto.mainProfileFoto
-                
+                guard let infoVC = navigationController.topViewController as? InfoViewController else { return }
                 infoVC.user = user
             }
         }

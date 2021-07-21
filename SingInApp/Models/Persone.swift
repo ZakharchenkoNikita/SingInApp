@@ -12,3 +12,9 @@ struct Persone {
     let moreInformation: MoreInformation
     let foto: PersoneFoto
 }
+
+extension Persone {
+    var fullName: String {
+        "\(name) \(surmane)"
+    }
+}

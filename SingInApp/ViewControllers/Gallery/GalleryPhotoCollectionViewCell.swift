@@ -8,6 +8,5 @@
 import UIKit
 
 class GalleryPhotoCollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet weak var galleryPhotoImage: UIImageView!
 }
